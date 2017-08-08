@@ -1,30 +1,52 @@
 {
-  "author": "Openlabs",
-  "name": "angular-tryton",
-  "version": "0.1.1",
-  "description": "",
-  "homepage": "",
-  "dependencies": {},
-  "devDependencies": {
-    "express": "~3.4.4",
-    "grunt": "~0.4.1",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-jshint": "~0.7.0",
-    "grunt-contrib-uglify": "~0.2.5",
-    "grunt-karma": "~0.12",
-    "grunt-ngdocs": "^0.2.2",
-    "karma": "~0.13",
-    "karma-closure": "^0.1.1",
-    "karma-coverage": "~0.2.2",
-    "karma-jasmine": "~0.1.5",
-    "karma-phantomjs-launcher": "~0.1.4",
-    "phantomjs": "~1.9.7-6"
+  "name": "angular2-tryton",
+  "version": "2.2.8",
+  "description": "AngularJS 2 Tryton RPC Client Service",
+  "license": "MIT",
+  "author": "Guillem Barba <guillem@alcarrer.net> | Sergi Carol <sergicarol35@gmail.com>",
+  "contributors": [
+    "Sharoon Thomas <sharoon.thomas@fulfil.io>",
+    "Tarun Bhardwaj <tarun.bhardwaj@fulfil.io>",
+    "Gaurav Butola <gaurav.butola@openlabs.co.in>",
+    "Sergi Carol <sergi@nan-tic.com>"
+  ],
+  "homepage": "https://github.com/NaN-tic/angular-tryton#readme",
+  "bugs": {
+    "url": "https://github.com/NaN-tic/angular-tryton/issues"
   },
+  "keywords": [
+    "angular2",
+    "ng2",
+    "Tryton"
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "karma run test/karma.conf.js"
+    "test": "karma run test/karma.conf.js",
+    "postinstall": "typings install",
+    "prepublish": "tsc",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
   },
-  "repository": "",
-  "engines": {
-    "node": "0.10.10"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergiCarol/angular-tryton.git#ng2"
+  },
+  "dependencies": {
+    "@angular/common": "2.2.1",
+    "@angular/compiler": "2.2.1",
+    "@angular/core": "2.2.1",
+    "@angular/http": "2.2.1",
+    "@angular/platform-browser": "2.2.1",
+    "@angular/platform-browser-dynamic": "2.2.1",
+    "@angular/upgrade": "2.2.1",
+    "angular-safeguard": "^1.0.0",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "^0.6.26"
+  },
+  "devDependencies": {
+    "typescript": "2.0.0",
+    "typings": "^1.0.4"
   }
 }
